@@ -112,15 +112,6 @@ toko-pojok-jepara/
 | Algoritma | K-Means Clustering |
 | Autentikasi | Laravel Breeze |
 
----
 
-## 📄 Laporan
-
-| Dokumen | Deskripsi |
-|---------|-----------|
-| [`laporan_lengkap/UAS-E-COMMERCE-PROJECT AKHIR.docx`](laporan_lengkap/UAS-E-COMMERCE-PROJECT%20AKHIR.docx) | Laporan UAS Mata Kuliah E-Commerce |
-| [`laporan_lengkap/UAS-rpl-PROJECT_AKHIR.docx`](laporan_lengkap/UAS-rpl-PROJECT_AKHIR.docx) | Laporan UAS Mata Kuliah RPL (termasuk UML) |
-
----
 
 *© 2026 — Proyek UAS Teknik Informatika, UNISNU Jepara*
