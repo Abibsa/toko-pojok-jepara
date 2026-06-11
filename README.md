@@ -118,8 +118,8 @@ toko-pojok-jepara/
 
 | Dokumen | Deskripsi |
 |---------|-----------|
-| [`laporan_lengkap/laporan_ecommerce.html`](laporan_lengkap/laporan_ecommerce.html) | Laporan UAS Mata Kuliah E-Commerce |
-| [`laporan_lengkap/laporan_rpl.html`](laporan_lengkap/laporan_rpl.html) | Laporan UAS Mata Kuliah RPL (termasuk UML) |
+| [`laporan_lengkap/UAS-E-COMMERCE-PROJECT AKHIR.docx`](laporan_lengkap/UAS-E-COMMERCE-PROJECT%20AKHIR.docx) | Laporan UAS Mata Kuliah E-Commerce |
+| [`laporan_lengkap/UAS-rpl-PROJECT_AKHIR.docx`](laporan_lengkap/UAS-rpl-PROJECT_AKHIR.docx) | Laporan UAS Mata Kuliah RPL (termasuk UML) |
 
 ---
 
