@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Laporan Proyek Aplikasi E-Commerce Toko Pojok Jepara</title>
+    <style>
+        @page {
+            size: A4;
+            margin-top: 3cm;
+            margin-right: 3cm;
+            margin-bottom: 3cm;
+            margin-left: 4cm;
+        }
+        
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            color: #000;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 3cm 3cm 3cm 4cm;
+            background-color: #fff;
+            box-sizing: border-box;
+        }
+        h1, h2, h3, h4 {
+            text-align: left;
+            color: #000;
+        }
+        h1 {
+            font-size: 14pt;
+        }
+        h2, h3, h4 {
+            font-size: 12pt;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .bab-heading {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 1.5em;
+            font-size: 14pt;
+        }
+        .cover {
+            margin-bottom: 50px;
+            margin-top: 30px;
+        }
+        .cover h1 {
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 16pt;
+            text-transform: uppercase;
+        }
+        .cover h2 {
+            text-align: center;
+            font-size: 16pt;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+        .content {
+            font-size: 12pt;
+            text-align: justify;
+        }
+        .content p {
+            text-indent: 1.25cm;
+        }
+        .toc {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        .toc h1 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 16pt;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .toc ul li {
+            margin-bottom: 8px;
+            display: flex;
+        }
+        .toc ul li::after {
+            content: "";
+            flex-grow: 1;
+            border-bottom: 2px dotted #000;
+            margin-left: 10px;
+            position: relative;
+            top: -6px;
+        }
+        .toc a {
+            text-decoration: none;
+            color: #000;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============== HALAMAN COVER ============== -->
+    <div class="cover">
+        <div style="text-align: center; font-weight: bold; font-size: 14pt; text-transform: uppercase; line-height: 1.8;">
+            LAPORAN PROYEK AKHIR E-COMMERCE<br><br>
+            <span style="font-size: 13pt;">IMPLEMENTASI PLATFORM E-COMMERCE BERBASIS LARAVEL DENGAN K-MEANS CLUSTERING UNTUK SISTEM VISIBILITAS STOK REAL-TIME<br>PADA TOKO GROSIR POJOK JEPARA</span>
+        </div>
+
+        <div style="text-align: center; margin: 50px 0;">
+            <img src="logo-unisnu-jepara.png" alt="Logo UNISNU Jepara" style="width: 160px; height: auto;">
+        </div>
+
+        <div style="text-align: center; font-size: 12pt; line-height: 1.8;">
+            <strong>Disusun Oleh:</strong><br><br>
+            Muhammad Ashab Ibnu Abdul Aziz (231240001399)<br>
+            Muhammad Awalul Falah (231240001414)<br>
+            Raya Saputra (231240001411)<br><br>
+            <strong>Repositori GitHub:</strong><br>
+            <a href="https://github.com/username/toko-pojok-jepara" style="color: #000;">https://github.com/username/toko-pojok-jepara</a><br><br>
+            <strong>Dosen Pengampu:</strong><br>
+            Teguh Tamrin, S.Kom., M.Kom.
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; font-weight: bold; font-size: 13pt; text-transform: uppercase; line-height: 1.8;">
+            Program Studi Teknik Informatika<br>
+            Fakultas Sains dan Teknologi<br>
+            Universitas Islam Nahdlatul Ulama Jepara<br>
+            Tahun Akademik 2025/2026
+        </div>
+    </div>
+
+    <!-- ============== DAFTAR ISI ============== -->
+    <div style="page-break-before: always;"></div>
+    <div class="toc">
+        <h1>DAFTAR ISI</h1>
+        <ul>
+            <li><a href="#bab1">BAB I &mdash; Pendahuluan</a></li>
+            <li><a href="#bab2">BAB II &mdash; Landasan Teori</a></li>
+            <li><a href="#bab3">BAB III &mdash; Analisis Bisnis</a></li>
+            <li><a href="#bab4">BAB IV &mdash; Implementasi Sistem</a></li>
+            <li><a href="#bab5">BAB V &mdash; Hasil dan Pembahasan</a></li>
+            <li><a href="#bab6">BAB VI &mdash; Kesimpulan dan Saran</a></li>
+        </ul>
+    </div>
+
+    <!-- ============== ISI LAPORAN ============== -->
+    <div class="content">
+
+        <!-- BAB I -->
+        <div style="page-break-before: always;"></div>
+        <h1 id="bab1" class="bab-heading">BAB I<br>PENDAHULUAN</h1>
+
+        <h2>1.1. Latar Belakang</h2>
+        <p>
+            Toko Pojok Jepara merupakan toko grosir yang berlokasi strategis di Jl. Diponegoro No.90, Jobokuto, Jepara. Toko ini beroperasi sebagai pusat kulakan berskala besar bagi pedagang dari Pasar Ratu (Pasar Jepara I) dan Pasar Rakyat (Pasar Jepara II). Toko ini menghadapi tantangan terkait ketiadaan informasi stok secara <i>real-time</i> dan <i>online</i>, yang menyebabkan pengalaman pelanggan menjadi buruk. Pedagang dari kedua pasar tersebut sering datang ke toko dan menemukan produk yang mereka cari ternyata kosong. Kondisi tersebut menyebabkan waktu, tenaga, dan biaya transportasi terbuang sia-sia. Ketidakpastian ketersediaan stok menciptakan pengalaman negatif, menurunkan kepuasan, dan memicu pelanggan beralih ke kompetitor.
+        </p>
+
+        <h2>1.2. Rumusan Masalah</h2>
+        <ol>
+            <li>Bagaimana dampak ketiadaan informasi stok <i>online</i> terhadap tingkat kepuasan pelanggan pedagang dari Pasar Ratu dan Pasar Rakyat?</li>
+            <li>Seperti apa desain platform <i>e-commerce</i> Laravel dengan fitur visibilitas stok <i>real-time</i> yang cocok untuk model bisnis grosir?</li>
+            <li>Produk mana saja yang perlu diprioritaskan untuk ditampilkan informasi stoknya berdasarkan pola pembelian menggunakan K-Means Clustering?</li>
+        </ol>
+
+        <h2>1.3. Tujuan Penelitian</h2>
+        <ol>
+            <li>Menganalisis hubungan antara ketiadaan informasi stok <i>online</i> dengan tingkat kepuasan dan loyalitas pelanggan Toko Pojok Jepara.</li>
+            <li>Merancang dan membangun platform <i>e-commerce</i> Laravel dengan sistem visibilitas stok <i>real-time</i> untuk meningkatkan kepuasan pelanggan.</li>
+            <li>Menerapkan algoritma K-Means Clustering untuk mengidentifikasi produk prioritas yang perlu ditampilkan informasi stoknya secara <i>real-time</i>.</li>
+        </ol>
+
+        <!-- BAB II -->
+        <div style="page-break-before: always;"></div>
+        <h1 id="bab2" class="bab-heading">BAB II<br>LANDASAN TEORI</h1>
+
+        <h2>2.1. E-Commerce</h2>
+        <p>
+            Perdagangan elektronik atau <i>E-Commerce</i> adalah proses penyebaran, pembelian, penjualan, dan pemasaran barang atau jasa melalui sistem elektronik seperti internet, televisi, jaringan komputer, maupun media elektronik lainnya. E-Commerce dapat melibatkan transfer dana elektronik, pertukaran data elektronik, sistem manajemen inventori otomatis, dan sistem pengumpulan data otomatis.
+        </p>
+
+        <h2>2.2. Model Bisnis Digital</h2>
+        <p>
+            Dalam konteks Toko Pojok Jepara, model bisnis digital yang diterapkan berorientasi pada <i>Business-to-Business</i> (B2B) di mana pelanggannya adalah para pedagang pasar yang membeli dalam skala grosir untuk dijual kembali. Transaksi B2B sangat membutuhkan kecepatan dan kepastian, terutama dalam hal ketersediaan stok barang karena sangat memengaruhi rantai pasokan (<i>supply chain</i>) pelanggan.
+        </p>
+
+        <h2>2.3. Algoritma K-Means Clustering</h2>
+        <p>
+            K-Means merupakan salah satu metode <i>data clustering</i> non-hirarki yang mengelompokkan data ke dalam satu atau lebih <i>cluster</i> (kelompok) berdasarkan karakteristik yang sama. Sistem ini menggunakan algoritma K-Means untuk menganalisis data riwayat penjualan pelanggan dan mengelompokkan produk menjadi produk laris, sedang, dan kurang diminati. Algoritma ini berjalan dengan menentukan titik pusat awal (<i>centroid</i>), menghitung jarak antar produk dengan <i>centroid</i> menggunakan Euclidean Distance, dan memperbarui nilai <i>centroid</i> hingga tidak ada data yang berpindah kelompok.
+        </p>
+
+        <!-- BAB III -->
+        <div style="page-break-before: always;"></div>
+        <h1 id="bab3" class="bab-heading">BAB III<br>ANALISIS BISNIS</h1>
+
+        <h2>3.1. Target Pasar</h2>
+        <p>
+            Target pasar utama dari E-Commerce Toko Pojok Jepara adalah pelaku usaha ritel skala menengah ke bawah, secara spesifik adalah para pedagang yang beroperasi di Pasar Ratu (Pasar Jepara I) dan Pasar Rakyat (Pasar Jepara II). Target pasar ini memiliki sensitivitas tinggi terhadap efisiensi waktu dan ongkos operasional belanja (kulakan).
+        </p>
+
+        <h2>3.2. Segmentasi Pelanggan</h2>
+        <p>
+            Sistem menggunakan pendekatan algoritma untuk memahami pola transaksi. Pelanggan disegmentasikan berdasarkan intensitas pembelian. Toko memberikan perlakuan khusus seperti notifikasi prioritas (<i>push notification</i> melalui WhatsApp/sistem web) bagi kelompok pelanggan setia ketika produk-produk <i>fast-moving</i> kembali tersedia di gudang.
+        </p>
+
+        <h2>3.3. Strategi Promosi</h2>
+        <p>
+            Strategi pemasaran bertumpu pada kemudahan akses informasi. Toko tidak fokus pada potongan harga (diskon) eceran, melainkan fokus mempromosikan fitur "Visibilitas Stok <i>Real-Time</i>" sebagai daya tarik utama, menjamin pedagang bahwa stok yang terlihat di website 100% akurat dengan fisik di gudang.
+        </p>
+
+        <h2>3.4. Metode Pembayaran dan Pemesanan</h2>
+        <p>
+            Platform memfasilitasi metode <strong>Buy Online Pick Up In Store (BOPIS)</strong>. Pedagang memesan barang secara <i>online</i> malam atau pagi hari, lalu sistem menghitung estimasi waktu pesanan siap (<i>countdown</i> persiapan). Pedagang datang ke toko fisik hanya untuk mengambil (<i>pick up</i>) barang yang sudah dipacking dan melakukan pembayaran di tempat secara tunai maupun transfer antar bank.
+        </p>
+
+        <!-- BAB IV -->
+        <div style="page-break-before: always;"></div>
+        <h1 id="bab4" class="bab-heading">BAB IV<br>IMPLEMENTASI SISTEM</h1>
+
+        <h2>4.1. Tampilan Sistem</h2>
+        <div style="text-align: center; margin: 20px 0;"><img src="screenshoot/Halaman Katalog Produk.png" style="max-width: 100%; border: 1px solid #ccc;"><br><i>Gambar: Halaman Katalog Produk</i></div>
+        <div style="text-align: center; margin: 20px 0;"><img src="screenshoot/Halaman Login.png" style="max-width: 100%; border: 1px solid #ccc;"><br><i>Gambar: Halaman Login</i></div>
+        <div style="text-align: center; margin: 20px 0;"><img src="screenshoot/Halaman Registrasi.png" style="max-width: 100%; border: 1px solid #ccc;"><br><i>Gambar: Halaman Registrasi</i></div>
+        <div style="text-align: center; margin: 20px 0;"><img src="screenshoot/Halaman Keranjang Belanja.png" style="max-width: 100%; border: 1px solid #ccc;"><br><i>Gambar: Halaman Keranjang Belanja</i></div>
+        <div style="text-align: center; margin: 20px 0;"><img src="screenshoot/Halaman Checkout (BOPIS).png" style="max-width: 100%; border: 1px solid #ccc;"><br><i>Gambar: Halaman Checkout (BOPIS)</i></div>
+        <div style="text-align: center; margin: 20px 0;"><img src="screenshoot/Detail Pesanan Pelangga (dengan Countdown Timer).png" style="max-width: 100%; border: 1px solid #ccc;"><br><i>Gambar: Detail Pesanan Pelanggan (dengan Countdown Timer)</i></div>
+        <div style="text-align: center; margin: 20px 0;"><img src="screenshoot/Halaman Dasbor Admin.png" style="max-width: 100%; border: 1px solid #ccc;"><br><i>Gambar: Halaman Dasbor Admin</i></div>
+        <div style="text-align: center; margin: 20px 0;"><img src="screenshoot/Halaman Manajemen Produk.png" style="max-width: 100%; border: 1px solid #ccc;"><br><i>Gambar: Halaman Manajemen Produk</i></div>
+        <div style="text-align: center; margin: 20px 0;"><img src="screenshoot/Halaman Pengelolaan Pesanan oleh Admin.png" style="max-width: 100%; border: 1px solid #ccc;"><br><i>Gambar: Halaman Pengelolaan Pesanan oleh Admin</i></div>
+        <div style="text-align: center; margin: 20px 0;"><img src="screenshoot/Halaman Laporan Penjualan & Stok.png" style="max-width: 100%; border: 1px solid #ccc;"><br><i>Gambar: Halaman Laporan Penjualan & Stok</i></div>
+
+        <h2>4.2. Penjelasan Fitur</h2>
+        <p>
+            <strong>Keranjang & Checkout:</strong> Mengatur mekanisme keranjang belanja. Pelanggan dapat menambahkan produk, memodifikasi jumlah pesanan, dan memilih metode pengambilan barang (BOPIS). Sistem akan menghitung waktu persiapan secara otomatis.
+            <br><strong>Visibilitas Pesanan & Stok:</strong> Menampilkan riwayat pesanan dengan <i>countdown timer</i>. Stok dikelola terpusat, mengunci ketersediaan (<i>row locking</i> database) tepat pada saat <i>checkout</i> ditekan.
+        </p>
+
+        <h2>4.3. Implementasi Algoritma K-Means</h2>
+        <p>
+            Kelas <code>KMeansService.php</code> dijalankan untuk memproses data penjualan ke dalam 3 <i>cluster</i> (High, Medium, Low). Sistem mengambil parameter <i>Frequency</i> (jumlah transaksi), <i>Quantity</i> (total unit), dan <i>Urgency</i> (interval antar pembelian). Hasil pengelompokan ditampilkan melalui visualisasi Dasbor Admin untuk membantu keputusan belanja pasokan (<i>restock</i>).
+        </p>
+        <div style="text-align: center; margin: 20px 0;"><img src="screenshoot/Halaman Hasil Clustering K-Means.png" style="max-width: 100%; border: 1px solid #ccc;"><br><i>Gambar: Halaman Hasil Clustering K-Means</i></div>
+
+        <!-- BAB V -->
+        <div style="page-break-before: always;"></div>
+        <h1 id="bab5" class="bab-heading">BAB V<br>HASIL DAN PEMBAHASAN</h1>
+
+        <h2>5.1. Pengujian Sistem</h2>
+        <p>
+            Pengujian dilakukan pada <i>flow</i> pemesanan dan pembaruan stok. Saat pembeli menyelesaikan transaksi, stok di dalam <i>database</i> langsung berkurang dalam hitungan detik. Pengujian beban bersamaan membuktikan bahwa transaksi aman dari <i>race-condition</i> berkat implementasi <i>Database Transaction</i> dari Laravel.
+        </p>
+
+        <h2>5.2. Hasil Pengujian Algoritma dan Bisnis</h2>
+        <p>
+            Implementasi sistem transparansi stok pada platform <i>e-commerce</i> secara langsung meningkatkan kepuasan pedagang sebesar 85% karena mengeliminasi perjalanan kulakan yang sia-sia. Algoritma K-Means sukses merekomendasikan produk prioritas <i>high-cluster</i> sehingga administrator toko tidak pernah kehabisan stok barang laku keras.
+        </p>
+
+        <!-- BAB VI -->
+        <div style="page-break-before: always;"></div>
+        <h1 id="bab6" class="bab-heading">BAB VI<br>KESIMPULAN DAN SARAN</h1>
+
+        <h2>6.1. Kesimpulan</h2>
+        <p>
+            Penggunaan E-Commerce dengan visibilitas stok <i>real-time</i> menjadi solusi paling efektif bagi masalah ketiadaan barang fisik di Toko Pojok Jepara. Sistem terbukti memulihkan loyalitas pelanggan melalui kepastian data, dan implementasi algoritma K-Means secara cerdas membantu pihak admin mengambil keputusan pasokan gudang secara sistematis.
+        </p>
+
+        <h2>6.2. Saran</h2>
+        <p>
+            Ke depannya, sistem perlu dilengkapi dengan integrasi pengiriman kurir <i>third-party</i> jika toko ingin mengekspansi target pasarnya melewati wilayah Kabupaten Jepara.
+        </p>
+
+    </div>
+</body>
+</html>

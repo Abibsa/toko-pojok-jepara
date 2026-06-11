@@ -1,0 +1,114 @@
+/* Konfigurasi untuk pencetakan / Print (A4, Margins) */
+@page {
+    size: A4;
+    margin-top: 3cm;
+    margin-right: 3cm;
+    margin-bottom: 3cm;
+    margin-left: 4cm;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    /* Memberikan simulasi kertas A4 di browser saat di-scroll */
+    max-width: 21cm;
+    margin: 0 auto;
+    padding: 3cm 3cm 3cm 4cm;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4 {
+    text-align: left;
+    color: #000;
+}
+.text-center {
+    text-align: center;
+}
+.bab-heading {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+.cover {
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+.cover h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 20pt;
+    text-transform: uppercase;
+}
+.cover h2 {
+    text-align: center;
+    font-size: 16pt;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+.anggota {
+    margin: 0 auto;
+    width: fit-content;
+    text-align: left;
+    font-size: 12pt;
+}
+.anggota ol {
+    margin-top: 10px;
+}
+.content {
+    font-size: 12pt;
+    text-align: justify;
+}
+.toc {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+.toc h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 16pt;
+}
+.toc ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.toc ul li {
+    margin-bottom: 8px;
+}
+.toc ul ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+.toc a {
+    text-decoration: none;
+    color: #000;
+}
+.toc a:hover {
+    text-decoration: underline;
+}
+.screenshot-placeholder {
+    border: 2px dashed #999;
+    background-color: #f9f9f9;
+    color: #666;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px 0;
+    font-style: italic;
+    font-size: 11pt;
+}
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f4f4f4;
+    padding: 2px 4px;
+    font-size: 11pt;
+}
+ul, ol {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
