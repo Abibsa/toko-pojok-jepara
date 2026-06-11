@@ -19,8 +19,7 @@ Aplikasi E-Commerce berbasis web untuk Toko Grosir Pojok Jepara, dilengkapi fitu
 
 ## 🔗 Repositori GitHub
 
-> **Link GitHub:** `[Isi link repository GitHub Anda di sini]`  
-> Contoh: `https://github.com/username/toko-pojok-jepara`
+> **Link GitHub:** [https://github.com/Abibsa/toko-pojok-jepara](https://github.com/Abibsa/toko-pojok-jepara)
 
 ---
 
@@ -48,7 +47,7 @@ Pastikan perangkat lunak berikut sudah terinstal:
 
 ```bash
 # 1. Clone repositori
-git clone https://github.com/username/toko-pojok-jepara.git
+git clone https://github.com/Abibsa/toko-pojok-jepara.git
 cd toko-pojok-jepara
 
 # 2. Instal dependensi PHP
